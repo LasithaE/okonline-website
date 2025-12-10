@@ -278,27 +278,6 @@ const HomePage = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }
             </div>
           </AnimatedSection>
         </div>
-
-        {/* Hero Visual */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block">
-          <div className="relative w-96 h-96">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-500/20 rounded-full blur-3xl" />
-            <svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 400 400">
-              <circle cx="200" cy="200" r="180" fill="none" stroke="url(#heroGradient)" strokeWidth="1" strokeDasharray="20 10" />
-              <circle cx="200" cy="200" r="140" fill="none" stroke="url(#heroGradient)" strokeWidth="1" strokeDasharray="15 15" />
-              <circle cx="200" cy="200" r="100" fill="none" stroke="url(#heroGradient)" strokeWidth="2" />
-              <defs>
-                <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#0066FF" />
-                  <stop offset="100%" stopColor="#00D4AA" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center">
-              <span className="text-3xl font-bold text-blue-600">OK</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
@@ -899,7 +878,7 @@ const ServicesPage = ({ setCurrentPage }: { setCurrentPage: (page: string) => vo
           ].map((item, i) => (
             <AnimatedSection key={i} delay={i * 100}>
               <div className="relative">
-                <div className="text-6xl font-bold text-white/5 mb-4">{item.step}</div>
+                <div className="text-6xl font-bold text-gray-300/40 mb-4">{item.step}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-gray-400">{item.desc}</p>
                 {i < 3 && (
