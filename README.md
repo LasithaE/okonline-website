@@ -1,6 +1,6 @@
 # OK Online
 
-A Next.js website ready for deployment on Netlify.
+A Next.js website ready for deployment on Vercel.
 
 ## Getting Started
 
@@ -18,54 +18,39 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deploy on Netlify
+## Deploy on Vercel
 
-### Option 1: Deploy via GitHub
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
 
-1. Push this code to GitHub:
-   ```bash
-   git add .
-   git commit -m "Initial Next.js setup"
-   git push origin master
-   ```
+### Option 1: Deploy via GitHub (Recommended)
 
-2. Go to [Netlify](https://app.netlify.com/)
-3. Click "Add new site" → "Import an existing project"
-4. Choose GitHub and select your repository
-5. Netlify will auto-detect Next.js settings
-6. Click "Deploy"
+1. Push this code to GitHub (already done!)
+2. Go to [Vercel](https://vercel.com/new)
+3. Import your GitHub repository: `LasithaE/okonline-website`
+4. Vercel will auto-detect Next.js settings
+5. Click "Deploy"
 
-### Option 2: Deploy via Netlify CLI
+Your site will be live in seconds with automatic HTTPS and global CDN!
 
-1. Install Netlify CLI:
-   ```bash
-   npm install -g netlify-cli
-   ```
+### Option 2: Deploy via Vercel CLI
 
-2. Login to Netlify:
-   ```bash
-   netlify login
-   ```
+```bash
+npm i -g vercel
+vercel login
+vercel
+```
 
-3. Initialize and deploy:
-   ```bash
-   netlify init
-   netlify deploy --prod
-   ```
+Follow the prompts, and your site will be deployed instantly.
 
 ## Project Structure
 
 ```
 okonline/
 ├── app/
-│   ├── about/
-│   │   └── page.tsx
 │   ├── globals.css
 │   ├── layout.tsx
-│   └── page.tsx
-├── public/
+│   └── page.tsx          (All pages in one file - SPA style)
 ├── .gitignore
-├── netlify.toml
 ├── next.config.ts
 ├── package.json
 ├── postcss.config.mjs
@@ -73,8 +58,17 @@ okonline/
 └── tsconfig.json
 ```
 
+## Features
+
+- 🏠 **Home Page** - Hero section, problem/solution, stats, services preview
+- 👥 **About Page** - Company story, values, team
+- 💼 **Services Page** - Meta Ads, WhatsApp Marketing, Email Marketing
+- 📧 **Contact Page** - Contact form with validation
+- ✨ **Animations** - Smooth scroll animations and floating shapes
+- 📱 **Fully Responsive** - Works perfectly on all devices
+
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs)
-- [Netlify Documentation](https://docs.netlify.com/)
+- [Vercel Documentation](https://vercel.com/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
