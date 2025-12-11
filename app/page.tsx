@@ -654,8 +654,8 @@ const AboutPage = ({ setCurrentPage }: { setCurrentPage: (page: string) => void 
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { name: 'Alex Chen', role: 'Founder & Strategy', image: 'Alex.png', position: 'center' },
-            { name: 'Sarah Mitchell', role: 'Head of Creative', image: 'Sarah.png', position: 'center' },
+            { name: 'Alex Chen', role: 'Founder & Strategy', image: 'alex.png', position: 'center' },
+            { name: 'Sarah Mitchell', role: 'Head of Creative', image: 'sarah.png', position: 'center' },
             { name: 'James Rodriguez', role: 'Performance Lead', image: 'james.png', position: ' center' }
           ].map((member, i) => (
             <AnimatedSection key={i} delay={i * 150}>
