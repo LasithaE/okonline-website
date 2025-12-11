@@ -168,10 +168,10 @@ const StatCounter = ({ value, suffix = '', label }: { value: number; suffix?: st
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">
-        {count}<span className="text-blue-600">{suffix}</span>
+      <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+        {count}<span className="text-blue-400">{suffix}</span>
       </div>
-      <div className="text-gray-500 text-sm uppercase tracking-widest">{label}</div>
+      <div className="text-gray-400 text-sm uppercase tracking-widest">{label}</div>
     </div>
   );
 };
@@ -208,20 +208,41 @@ const ServiceCard = ({ icon, title, description, features, index }: { icon: Reac
 // Client Logo Component
 const ClientLogos = () => {
   const logos = [
-    'TechFlow', 'Quantify', 'NexGen', 'AppVerse', 'CloudSync', 
-    'DataPulse', 'ScaleUp', 'InnovateLabs'
+    'amplience.jpg', 'finbourne.jpg', 'ground.jpg', 'innerworks.jpg',
+    'modelml.jpg', 'ppro.jpg', 'qio.jpg', 'vertice.jpg'
   ];
 
+  // Duplicate the logos array for seamless infinite scroll
+  const duplicatedLogos = [...logos, ...logos];
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-      {logos.map((name, i) => (
-        <div 
-          key={i} 
-          className="h-16 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 font-semibold text-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 cursor-default"
-        >
-          {name}
-        </div>
-      ))}
+    <div className="relative overflow-hidden">
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          animation: scroll 15s linear infinite;
+        }
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+      <div className="flex gap-6 items-center animate-scroll">
+        {duplicatedLogos.map((logo, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 h-16 w-40 flex items-center justify-center transition-all duration-300"
+          >
+            <img
+              src={`/company_logos/${logo}`}
+              alt={logo.replace('.jpg', '')}
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
